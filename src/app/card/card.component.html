@@ -1,0 +1,44 @@
+<article>
+<div class="card">
+    <div class="idea-icon">
+        <mat-icon aria-hidden="false" aria-label="lightbulb icon" class="idea">lightbulb_outlined</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="assignment icon" class="assigment-icon">assignment</mat-icon>
+    </div>
+    <div class="content">
+        <div class="row1">
+            <img src="../../assets/default-img.jpeg" alt="" class="idea-img">
+            <h1 class="summary">{{summary}}</h1>
+            <div class="idea-info">
+                <div class="info">
+                    <p class="posted">Posted </p>
+                    <p class="user blue">{{user}}</p>
+                    <div class="review">
+                        <mat-icon aria-hidden="false" aria-label="star icon" class="star-review" *ngFor="let star of stars">{{star}}</mat-icon>
+                        <p>{{reviewText}}</p>
+                    </div>
+                </div>
+                <div class="date-info">
+                    <mat-icon aria-hidden="false" aria-label="calendar icon" class="calendar-icon">calendar_month</mat-icon>
+                    <p class="date">{{date}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="assignees-info">
+                <h2>Assignees</h2>
+                <p class="blue">{{assignees}}</p>
+            </div>
+            <div class="workflow-info">
+                <h2>Workflow
+                    <mat-icon aria-hidden="false" aria-label="edit icon" class="edit">edit</mat-icon>
+                </h2>
+                <p class="blue">{{workflow}}</p>
+            </div>
+            <div class="review-info">
+                <h2>Review Score</h2>
+                <p class="review-score">{{reviews}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+</article>

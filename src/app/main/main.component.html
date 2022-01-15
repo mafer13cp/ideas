@@ -1,0 +1,12 @@
+<section class="main">
+    <app-card *ngFor="let idea of ideas" 
+    [summary]=idea.summary 
+    [user]=idea.user
+    [date]=idea.date
+    [assignees]=idea.assignees
+    [workflow]=idea.workflow
+    [reviews]=idea.reviewNumber
+    [reviewScore]=idea.reviewScore
+    [anonymous]=idea.anonymous
+    ></app-card>
+</section>

@@ -1,0 +1,75 @@
+<section class="main">
+    <app-header class="header"></app-header>
+    <div class="addIdea">
+        <form id="survey-form">
+            <mat-icon aria-hidden="false" aria-label="lightbulb icon" class="idea">lightbulb_outlined</mat-icon>
+            <div class="form-group">
+              <label id="name-label" for="name" class="group-title">What's your name?</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+                #user (input)="ngSetName(user.value)"
+              />
+            </div>
+            <div class="form-group">
+              <p class="group-title">Idea summary:</p>
+              <textarea
+                id="comments"
+                class="input-textarea"
+                name="comment"
+                placeholder="Tell us about your new idea!"
+                required
+                #summary (input)="ngSetSummary(summary.value)"
+              ></textarea>
+            </div>
+            <div class="form-group">
+                <label id="name-label" for="name" class="group-title">Assignees:</label>
+                <input
+                  type="text"
+                  name="assignees"
+                  id="assignees"
+                  class="form-control"
+                  placeholder="Assignees"
+                  required
+                  #assignees (input)="ngSetAssignees(assignees.value)"
+                />
+              </div>
+              <div class="form-group">
+                <label id="name-label" for="name" class="group-title">Workflow:</label>
+                <input
+                  type="text"
+                  name="workflow"
+                  id="workflow"
+                  class="form-control"
+                  placeholder="Workflow"
+                  required 
+                  #workflow (input)="ngSetWorkflow(workflow.value)"
+                />
+              </div>
+              <div class="form-group">
+                <label id="name-label" for="name" class="group-title">Image URL: (optional)</label>
+                <input
+                  type="text"
+                  name="imgUrl"
+                  id="imgUrl"
+                  class="form-control"
+                  placeholder="Image Url"
+                  require
+                  #imgUrl (input)="ngSetImgUrl(imgUrl.value)"
+                />
+              </div>
+              <div class="form-group">
+                <mat-slide-toggle class="anonymous" color='accent' (click)="ngSetAnonymous()">Post anonymous</mat-slide-toggle>
+              </div>
+            <div class="form-group">
+              <button type="submit" id="submit" class="submit-button" mat-raised-button color="warn" (click)=ngAddIdea()>
+                SUBMIT
+              </button>
+            </div>
+          </form>
+    </div>
+</section>

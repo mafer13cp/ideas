@@ -1,12 +1,16 @@
 <section class="main">
-    <app-card *ngFor="let idea of ideas" 
-    [summary]=idea.summary 
-    [user]=idea.user
-    [date]=idea.date
-    [assignees]=idea.assignees
-    [workflow]=idea.workflow
-    [reviews]=idea.reviewNumber
-    [reviewScore]=idea.reviewScore
-    [anonymous]=idea.anonymous
-    ></app-card>
+    <app-header class="header"></app-header>
+    <div class="cardGrid">
+        <app-card *ngFor="let idea of ideas" 
+        [summary]=idea.summary 
+        [user]=idea.user
+        [date]=idea.date
+        [assignees]=idea.assignees
+        [workflow]=idea.workflow
+        [reviews]=idea.reviewNumber
+        [reviewScore]=idea.reviewScore
+        [anonymous]=idea.anonymous
+        [imgUrl]=idea.imgUrl
+        class="card"></app-card>
+    </div>
 </section>

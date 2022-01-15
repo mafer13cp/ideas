@@ -1,6 +1,6 @@
 article {
     padding: 2%;
-    padding-top: 30px;
+    padding-top: 15px;
 }
 .card {
     border: 1px solid #e3e3e3;
@@ -45,7 +45,9 @@ article {
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
     0 12.5px 10px rgba(0, 0, 0, 0.171),
-    0 15px 17px rgba(0, 0, 0, 0.137)
+    0 15px 17px rgba(0, 0, 0, 0.137);
+    max-height: 250px;
+    overflow: hidden;
 }
 .summary {
     padding-top: 20px;
@@ -112,27 +114,8 @@ article {
         width: 35%;
     }
 }
+
 @media (max-width: 900px) {
-    .row1 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .idea-img {
-        max-width: 80%;
-    }  
-    .idea-info {
-        padding-top: 30px;
-        justify-content: center;
-        align-items: center;
-    }
-    .summary {
-        padding: 0;
-        padding-bottom: 50px;
-        text-align: center;
-    }
-}
-@media (max-width: 710px) {
     .row1 {
         display: flex;
         flex-direction: column;
@@ -166,7 +149,7 @@ article {
         align-items: center;
     }
     .idea-img {
-        width: 90%;
+        max-width: 90%;
         order: 0;
     }    
     .idea-info {

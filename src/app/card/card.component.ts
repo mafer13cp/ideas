@@ -9,12 +9,13 @@ export class CardComponent implements OnInit {
   //Inputs
   @Input() summary: string = "Idea summary";
   @Input() user: string = "Anonymous user";
-  @Input() date: string = "June 27, 2019, 12:00PM"
+  @Input() date: string = "";
   @Input() reviews: string = "---";
   @Input() reviewScore: number = 0;
   @Input() assignees: string = "Assignees";
   @Input() workflow: string = "Idea review";
   @Input() anonymous: Number = 0;
+  @Input() imgUrl: string = "";
 
   //
   rating: number = 0; //total score / # of reviews
@@ -36,6 +37,8 @@ export class CardComponent implements OnInit {
       this.rating = Math.floor(this.reviewScore/ parseInt(this.reviews));
       this.ngSetRating();
     }
+    if(this.imgUrl==null || this.imgUrl== "")
+      this.imgUrl = '../../assets/images/default-img.jpeg';
   }
 
   ngSetRating() {

@@ -1,6 +1,13 @@
 .main {
     margin: 0;
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100%;
     background-color: #eee;
+}
+.header {
+    z-index: 999;
+    position: fixed;
+}
+.cardGrid {
+    padding-top: 72px;
 }
